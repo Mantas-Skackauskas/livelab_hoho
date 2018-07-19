@@ -7,10 +7,14 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FriendPage } from '../pages/friend/friend';
 import { MorePage } from '../pages/more/more';
-import {BonusPage} from '../pages/bonus/bonus'
+import { BonusPage } from '../pages/bonus/bonus';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { File } from '@ionic-native/file';
+import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     FriendPage,
     MorePage,
-    BonusPage
+    BonusPage,
+    ProgressBarComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -32,11 +38,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     FriendPage,
     MorePage,
-    BonusPage
+    BonusPage,
+    
   ],
   providers: [
     StatusBar,
+    PhotoViewer,
     SplashScreen,
+    File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

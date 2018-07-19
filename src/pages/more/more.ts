@@ -33,10 +33,9 @@ export class MorePage {
 
 
 
-
   presentLoadingDefault() {
     let loading = this.toastCtrl.create({
-      message: 'Thanks! +200 Points',
+      message: 'Thanks! +150 Points',
       duration: 800,
       position: 'top'
     });

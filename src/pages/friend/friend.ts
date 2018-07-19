@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProgressBarComponent } from '../../components/progress-bar/progress-bar';
 
 /**
  * Generated class for the FriendPage page.
@@ -14,6 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'friend.html',
 })
 export class FriendPage {
+
+
+  loadProgress:number = 10;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -30,6 +34,6 @@ export class FriendPage {
     }
   }
 
-
+  
 
 }

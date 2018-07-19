@@ -17,7 +17,102 @@
 <ion-content padding>
     <div class="main-content" (swipe)="swipe($event)">
 
-        <p>hello!</p>
+        <ion-card>
+
+            <img src="assets/img/brands1.jpg"/>
+        
+            <ion-card-content>
+              <ion-card-title>
+                5% off electronics
+              </ion-card-title>
+              <p>
+                For the next £200 spent
+              </p>
+            </ion-card-content>
+        
+            <ion-row no-padding>
+   
+              <ion-col text-center>
+                <button ion-button clear large color="danger" icon-start (click)="onViewImg('www/assets/img/qr.png','Scan')">
+                  <ion-icon name='sync'></ion-icon>
+                  Spend
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                <button ion-button clear large color="danger" icon-start>
+                  <ion-icon name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+            </ion-row>
+        
+          </ion-card>
+        
+
+
+        <ion-card>
+
+            <img src="assets/img/brands2.jpg"/>
+        
+            <ion-card-content>
+              <ion-card-title>
+                        £10 off groceries
+
+              </ion-card-title>
+              <p>
+                  When spent £100 or more
+              </p>
+            </ion-card-content>
+        
+            <ion-row no-padding>
+              <ion-col text-center>
+                <button ion-button clear large color="danger" icon-start (click)="onViewImg('www/assets/img/qr.png','Scan')">
+                  <ion-icon name='sync'></ion-icon>
+                  Spend
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                <button ion-button clear large color="danger" icon-start>
+                  <ion-icon name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+            </ion-row>
+        
+          </ion-card>
+        
+
+        <ion-card>
+
+            <img src="assets/img/brands3.jpg"/>
+        
+            <ion-card-content>
+              <ion-card-title>
+                  Small coffee for only 30p
+              </ion-card-title>
+              <p>
+                On the next visit
+              </p>
+            </ion-card-content>
+        
+            <ion-row no-padding>
+  
+              <ion-col text-center>
+                <button ion-button clear large color="danger" icon-start (click)="onViewImg('www/assets/img/qr.png','Scan')">
+                  <ion-icon name='sync'></ion-icon>
+                  Spend
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                <button ion-button clear large color="danger" icon-start>
+                  <ion-icon name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+            </ion-row>
+        
+          </ion-card>
+        
       
       </div>
 </ion-content>

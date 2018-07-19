@@ -7,9 +7,11 @@ import { BonusPage } from '../bonus/bonus';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  
 })
 export class HomePage {
+
 
   source:string = "assets/img/tick.png"
   p1:string="assets/img/i16.png";

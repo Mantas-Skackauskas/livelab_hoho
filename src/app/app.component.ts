@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Tab } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -28,7 +28,7 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Friend', component: FriendPage },
       { title: 'More', component: MorePage },
-      { title: 'Bonus', component: BonusPage }
+      { title: 'Bonus', component: BonusPage },
 
 
     ];
