@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the MorePage page.
+ * Generated class for the BonusPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-more',
-  templateUrl: 'more.html',
+  selector: 'page-bonus',
+  templateUrl: 'bonus.html',
 })
-export class MorePage {
+export class BonusPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MorePage');
+    console.log('ionViewDidLoad BonusPage');
   }
 
 
   swipe(event) {
-    if(event.direction === 2) {
+    if(event.direction === 8) {
       //this.navCtrl.push(HomePage);
       this.navCtrl.popToRoot()
     }

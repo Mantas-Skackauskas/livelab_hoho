@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FriendPage } from '../pages/friend/friend';
 import { MorePage } from '../pages/more/more';
+import { BonusPage } from '../pages/bonus/bonus';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,9 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Friend', component: FriendPage },
-      { title: 'More', component: MorePage }
+      { title: 'More', component: MorePage },
+      { title: 'Bonus', component: BonusPage }
+
 
     ];
 
