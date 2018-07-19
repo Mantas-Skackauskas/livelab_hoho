@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding class="viewpost">
-
+  <div class="main-content" (swipe)="swipe($event)">
   <ion-grid>
     <ion-row> 
       <ion-col >
@@ -48,9 +48,9 @@
     </ion-row>
     <ion-row>
       <ion-col>
-          <button ion-button secondary menuToggle full >Toggle Menu</button>
+          <button ion-button secondary full (click)="showProfilePage()">Toggle Menu</button>
       </ion-col>
     </ion-row>
   </ion-grid>
-
+</div>
 </ion-content>

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {HomePage} from '../home/home';
 
 /**
- * Generated class for the FriendPage page.
+ * Generated class for the MorePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,26 +10,16 @@ import {HomePage} from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-friend',
-  templateUrl: 'friend.html',
+  selector: 'page-more',
+  templateUrl: 'more.html',
 })
-export class FriendPage {
+export class MorePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FriendPage');
+    console.log('ionViewDidLoad MorePage');
   }
-
-
-  swipe(event) {
-    if(event.direction === 4) {
-      //this.navCtrl.push(HomePage);
-      this.navCtrl.popToRoot()
-    }
-  }
-
-  
 
 }
