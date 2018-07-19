@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the MorePage page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MorePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadCtrl: LoadingController, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -23,11 +23,31 @@ export class MorePage {
   }
 
 
+
   swipe(event) {
     if(event.direction === 2) {
-      //this.navCtrl.push(HomePage);
-      this.navCtrl.popToRoot()
+      this.presentLoadingDefault();
     }
+  }
+
+
+
+
+
+  presentLoadingDefault() {
+    let loading = this.toastCtrl.create({
+      message: 'Thanks! +200 Points',
+      duration: 800,
+      position: 'top'
+    });
+    
+
+    this.navCtrl.popToRoot();
+
+    loading.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+    loading.present();
   }
 
 }

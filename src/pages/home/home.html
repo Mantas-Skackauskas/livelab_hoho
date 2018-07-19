@@ -12,45 +12,53 @@
   <ion-grid>
     <ion-row> 
       <ion-col >
-          <ion-img class="center"  src="assets/img/i16.png"></ion-img>
+          <ion-img class="center"  [src]="p1" (click)="setImg(1)"></ion-img>
       </ion-col>
       <ion-col>
-          <ion-img class="center"  src="assets/img/i11.png"></ion-img>
+          <ion-img class="center"  [src]="p2" (click)="setImg(2)"></ion-img>
         </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-          <ion-img class="center"  src="assets/img/i18.png"></ion-img>
+          <ion-img class="center"  [src]="p3" (click)="setImg(3)"></ion-img>
         </ion-col>
       <ion-col>
-          <ion-img class="center"  src="assets/img/i12.png"></ion-img>
+          <ion-img class="center"  [src]="p4" (click)="setImg(4)"></ion-img>
         </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
             
-              <ion-img class="center"  src="assets/img/icons3.png"></ion-img>
+              <ion-img class="center"  [src]="p5" (click)="setImg(5)"></ion-img>
 
       </ion-col>
       <ion-col>
 
-          <ion-img class="center"  src="assets/img/i14.png"></ion-img>
+          <ion-img class="center"  [src]="p6" (click)="setImg(6)"></ion-img>
 
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-          <ion-img class="center"  src="assets/img/i15.png"></ion-img>
+          <ion-img class="center"  [src]="p7" (click)="setImg(7)"></ion-img>
         </ion-col>
       <ion-col>
-          <ion-img class="center"  src="assets/img/i17.png"></ion-img>
+          <ion-img class="center"  [src]="p8" (click)="setImg(8)"></ion-img>
         </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-          <button ion-button secondary full (click)="showProfilePage()">Toggle Menu</button>
-      </ion-col>
-    </ion-row>
+
   </ion-grid>
+
+  
 </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title   text-center (click)="presentLoadingDefault()">
+
+      Done!
+
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
