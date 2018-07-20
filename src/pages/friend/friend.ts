@@ -38,9 +38,9 @@ export class FriendPage {
   
   presentAlert() {
     let alert = this.alertCtrl.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      buttons: ['Dismiss']
+      subTitle: 'John seems to be having pain for the last 3 weeks',
+      title: 'Reach him out!',
+      buttons: ['Okay']
     });
     alert.present();
   }

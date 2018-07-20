@@ -37,11 +37,11 @@
           <button ion-button clear large item-end><ion-icon name="send"></ion-icon></button>
         </ion-item>
        
-        <ion-item (click)="presentAlert()">
+        <ion-item >
             <ion-avatar item-start>
               <img src="assets/img/human4.jpg">
             </ion-avatar>
-            <h2>John<progress-bar [progress]="21" [newcolor]="'#ffaf48'" ></progress-bar></h2>
+            <h2>John<progress-bar [progress]="21" [newcolor]="'#ffaf48'" (click)="presentAlert()" ></progress-bar></h2>
             <button ion-button clear large  item-end><ion-icon name="send"></ion-icon></button>
             <p>Reach him out!</p>
           </ion-item>  
