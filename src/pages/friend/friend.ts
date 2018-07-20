@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProgressBarComponent } from '../../components/progress-bar/progress-bar';
 import { AlertController } from 'ionic-angular';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { File } from '@ionic-native/file';
 
 /**
  * Generated class for the FriendPage page.
@@ -20,7 +22,8 @@ export class FriendPage {
 
   loadProgress:number = 10;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController,private photoViewer: PhotoViewer
+    ,private file: File) {
   }
 
   ionViewDidLoad() {
@@ -29,7 +32,7 @@ export class FriendPage {
 
 
   swipe(event) {
-    if(event.direction === 4) {
+    if(event.direction == 4) {
       //this.navCtrl.push(HomePage);
       this.navCtrl.popToRoot()
     }
@@ -38,11 +41,16 @@ export class FriendPage {
   
   presentAlert() {
     let alert = this.alertCtrl.create({
-      subTitle: 'John seems to be having pain for the last 3 weeks',
+      subTitle: 'John seems to be having tooth pain for the last 3 weeks',
       title: 'Reach him out!',
       buttons: ['Okay']
     });
     alert.present();
+  }
+
+  onViewImg(img, title){
+    console.log(this.file.applicationDirectory , img);
+    this.photoViewer.show(this.file.applicationDirectory + img, title, {share: true});
   }
 
 }

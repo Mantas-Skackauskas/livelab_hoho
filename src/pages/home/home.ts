@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {LoadingController, ToastController} from 'ionic-angular';
+import {LoadingController, ToastController, AlertController} from 'ionic-angular';
 import {FriendPage} from '../friend/friend';
 import { MorePage } from '../more/more';
 import { BonusPage } from '../bonus/bonus';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { File } from '@ionic-native/file';
+import { Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +15,7 @@ import { BonusPage } from '../bonus/bonus';
 })
 export class HomePage {
 
-
+  first:boolean = true;
   source:string = "assets/img/tick.png"
   p1:string="assets/img/i16.png";
   p2:string="assets/img/i11.png";
@@ -23,8 +26,21 @@ export class HomePage {
   p7:string="assets/img/i15.png";
   p8:string="assets/img/i17.png";
 
-  constructor(public navCtrl: NavController, public loadCtrl: LoadingController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public loadCtrl: LoadingController, public toastCtrl: ToastController,private photoViewer: PhotoViewer
+    ,private file: File,public platform: Platform, public alertCtrl: AlertController) {
 
+  }
+
+
+  ionViewDidLoad() {
+
+    
+    this.platform.ready().then(() => { 
+        if(this.first==true){
+          this.first=false;
+          this.onViewImg('www/assets/img/sc3.png','')
+        }
+    });
   }
 
   showProfilePage() {
@@ -87,5 +103,17 @@ export class HomePage {
     loading.present();
   }
   
-  
+  onViewImg(img, title){
+    console.log(this.file.applicationDirectory , img);
+    this.photoViewer.show(this.file.applicationDirectory + img, title, {share: true});
+  }
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      subTitle: 'You\'ve been having light back pain for the last 2 months. Contact your GP for more information!',
+      title: 'Daily contribution! +50 Points',
+      buttons: ['Continue']
+    });
+    alert.present();
+  }
 }

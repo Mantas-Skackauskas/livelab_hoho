@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import { FriendPage } from '../pages/friend/friend';
 import { MorePage } from '../pages/more/more';
 import { BonusPage } from '../pages/bonus/bonus';
+import { MePage } from '../pages/me/me';
+import { DataPage } from '../pages/data/data';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +26,8 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
     FriendPage,
     MorePage,
     BonusPage,
+    MePage,
+    DataPage,
     ProgressBarComponent
     
   ],
@@ -39,6 +43,8 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
     FriendPage,
     MorePage,
     BonusPage,
+    MePage,
+    DataPage
     
   ],
   providers: [

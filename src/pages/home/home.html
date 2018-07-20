@@ -58,6 +58,13 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title text-center (click)="presentLoadingDefault()">Done!</ion-title>
+    <ion-title text-center (click)="presentAlert()"  (click)="presentLoadingDefault()">  
+      
+      <ion-icon name="arrow-dropleft"></ion-icon>
+
+      Done!
+      <ion-icon name="arrow-dropright"></ion-icon>
+
+    </ion-title>
   </ion-toolbar>
 </ion-footer>

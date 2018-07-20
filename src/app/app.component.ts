@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import { FriendPage } from '../pages/friend/friend';
 import { MorePage } from '../pages/more/more';
 import { BonusPage } from '../pages/bonus/bonus';
+import { MePage } from '../pages/me/me';
+import { DataPage } from '../pages/data/data';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,6 +30,7 @@ export class MyApp {
       { title: 'My buddies', component: FriendPage },
       { title: 'More', component: MorePage },
       { title: 'Bonus', component: BonusPage },
+      { title: 'My Profile', component: MePage },
 
 
     ];
