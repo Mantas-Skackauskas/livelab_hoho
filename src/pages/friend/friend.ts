@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProgressBarComponent } from '../../components/progress-bar/progress-bar';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the FriendPage page.
@@ -19,7 +20,7 @@ export class FriendPage {
 
   loadProgress:number = 10;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -35,5 +36,13 @@ export class FriendPage {
   }
 
   
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Low battery',
+      subTitle: '10% of battery remaining',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
 
 }

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>friend</ion-title>
+    <ion-title>Your buddies</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,9 +17,53 @@
 
     <div class="main-content" (swipe)="swipe($event)">
 
-    <p>opa</p>
 
-    <progress-bar [progress]="loadProgress"></progress-bar>
-    
-    </div>
+
+    <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/img/human1.jpg">
+          </ion-avatar>
+          <h2>Tom<progress-bar [progress]="90" [newcolor]="'#487eff'"></progress-bar>
+          </h2>
+          <button ion-button clear large item-end><ion-icon name="send"></ion-icon></button>
+        </ion-item>
+       
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/img/human2.jpg">
+          </ion-avatar>
+          <h2>Kevin<progress-bar [progress]="75" [newcolor]="'#48a0ff'"></progress-bar></h2>
+          <button ion-button clear large item-end><ion-icon name="send"></ion-icon></button>
+        </ion-item>
+       
+        <ion-item (click)="presentAlert()">
+            <ion-avatar item-start>
+              <img src="assets/img/human4.jpg">
+            </ion-avatar>
+            <h2>John<progress-bar [progress]="21" [newcolor]="'#ffaf48'" ></progress-bar></h2>
+            <button ion-button clear large  item-end><ion-icon name="send"></ion-icon></button>
+            <p>Reach him out!</p>
+          </ion-item>  
+
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/img/human3.jpg">
+          </ion-avatar>
+          <h2>Mark<progress-bar [progress]="50" [newcolor]="'#48d1ff'"></progress-bar></h2>
+          <button ion-button large clear item-end><ion-icon name="send"></ion-icon></button>
+        </ion-item>
+       
+
+        <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/img/human5.jpg">
+            </ion-avatar>
+            <h2>Ivan<progress-bar [progress]="72" [newcolor]="'#48a0f0'"></progress-bar></h2>
+            <button ion-button large clear item-end><ion-icon name="send"></ion-icon></button>
+          </ion-item>
+
+       </ion-list>
+      </div>
+
 </ion-content>
